@@ -31,9 +31,9 @@ const checkArray = function (newarr) {
   return sumOfGreater;
 };
 
-const randomArray = giveMeRandom();
+const randomArray = giveMeRandom(10);
 
-total = checkArray(randomArray);
+const total = checkArray(randomArray);
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
