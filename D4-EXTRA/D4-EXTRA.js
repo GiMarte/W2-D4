@@ -33,7 +33,7 @@ const checkArray = function (newarr) {
 
 const randomArray = giveMeRandom(10);
 
-const total = checkArray(randomArray);
+checkArray(randomArray);
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
@@ -44,7 +44,7 @@ const total = checkArray(randomArray);
 const shoppingCart = [
   {
     id: 1,
-    price: 10,
+    price: 1055,
     name: "roba",
     quantity: 2,
   },
@@ -111,6 +111,12 @@ console.log(maxShoppingCart(shoppingCart));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const latestShoppingCart = function (shoppingCart) {
+  return shoppingCart[shoppingCart.length - 1];
+};
+
+console.log(latestShoppingCart(shoppingCart));
+
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
  La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
@@ -118,11 +124,36 @@ console.log(maxShoppingCart(shoppingCart));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const loop = function (num) {
+  if (num < 0 || num > 9) {
+    console.log("errore, numero deve essere compreso da 0  e 9");
+    return;
+  }
+  let counter = 0;
+  while (counter < 3) {
+    let randomNumb = Math.floor(Math.random() * 10);
+    console.log("numero generato:", randomNumb);
+    if (randomNumb > num) {
+      counter++;
+      console.log("succeso!", counter);
+    } else {
+      counter = 0;
+      console.log("fallimento, il contantore si azzera");
+    }
+  }
+  return counter
+};
+
+console.log(loop(4));
+
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+
+
 
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
