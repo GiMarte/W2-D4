@@ -111,9 +111,10 @@ console.log(check3and7(69));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const reverseString = function (s) {
-    
-}
-
+  let reverser = s.split("").reverse().join("");
+  return reverser;
+};
+console.log(reverseString("reldnas mada"));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
@@ -122,6 +123,17 @@ const reverseString = function (s) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const upperFirst = function (st) {
+  let words = st.split(" ");
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+  }
+
+  return words.join(" ");
+};
+
+console.log(upperFirst("scavezza collo labiale magico"));
+
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
@@ -129,8 +141,25 @@ const reverseString = function (s) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const cutString = function (s1) {
+  let cut = s1.slice(1, -1);
+  return cut + " " + s1;
+};
+
+console.log(cutString("Mi chiamo carlo"));
+
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const giveMeRandom = function (number) {
+  let arr = [];
+  for (let i = 0; i < number; i++) {
+    let randomNumber = Math.floor(Math.random() * 11);
+    arr.push(randomNumber);
+  }
+  return arr;
+};
+console.log(giveMeRandom(10));
