@@ -58,11 +58,11 @@ const boundary = function (n) {
     let confermo400 = "confermato";
     return confermo400;
   } else {
-      let noIdea= "e non conosco " + n + " come numero"
-      return noIdea
+    let noIdea = "e non conosco " + n + " come numero";
+    return noIdea;
   }
 };
-console.log("so contare da 20 a 100, so dire 400" ,boundary(400));
+console.log("so contare da 20 a 100, so dire 400", boundary(400));
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -72,23 +72,48 @@ console.log("so contare da 20 a 100, so dire 400" ,boundary(400));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const epify = function (str) {
-    if (str === "epicode".toLowerCase) 
+  const strMinuscolo = str.toLowerCase();
+  if (strMinuscolo === "epicode") {
+    return str;
+  } else {
+    let aggiungoEpicode = "EPICODE " + str;
+    return aggiungoEpicode;
+  }
+};
+console.log(epify("Voglio imparare"));
 
- }
-
-console.log(epify("ciao"))
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const check3and7 = function (n1) {
+  if (n1 >= 0) {
+    if (n1 % 3 === 0 || n1 % 7 === 0) {
+      let yep = n1 + " e' un multiplo di 3 o di 7";
+      return yep;
+    } else {
+      let nop = n1 + " non e' un multiplo di 3 o di 7";
+      return nop;
+    }
+  } else {
+    let cantAccept = "Non accetto " + n1 + " o persone negative";
+    return cantAccept;
+  }
+};
+console.log(check3and7(69));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const reverseString = function (s) {
+    
+}
+
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
