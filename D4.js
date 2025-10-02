@@ -39,7 +39,7 @@ const crazyDiff = function (num) {
     let difference = (num - 19) * 3;
     return difference;
   } else {
-    let difference = num - 19;
+    let difference = Math.abs(num - 19);
     return difference;
   }
 };
@@ -58,7 +58,7 @@ const boundary = function (n) {
     let confermo400 = "confermato";
     return confermo400;
   } else {
-    let noIdea = "e non conosco " + n + " come numero";
+    let noIdea = "non conosco " + n + " come numero";
     return noIdea;
   }
 };
