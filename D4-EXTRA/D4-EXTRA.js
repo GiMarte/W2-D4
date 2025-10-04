@@ -186,14 +186,15 @@ console.log(longest(tanteStringhe));
 
 const noSpam = function (emailCont) {
   let lowerEmail = emailCont.toLowerCase();
-  if (!lowerEmail.includes("spam") && !lowerEmail.includes("scam")) {
+  let noSpaceEmail = lowerEmail.replace(/\s/g, "");
+  if (!noSpaceEmail.includes("spam") && !noSpaceEmail.includes("scam")) {
     return true;
   } else {
     return false;
   }
 };
 
-console.log(noSpam("Sciame Scaem s cam camera scamea "));
+console.log(noSpam("ciaom aestro s c sc sc sc"));
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
