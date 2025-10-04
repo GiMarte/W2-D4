@@ -141,7 +141,7 @@ const loop = function (num) {
       console.log("fallimento, il contantore si azzera");
     }
   }
-  return counter
+  return counter;
 };
 
 console.log(loop(4));
@@ -149,24 +149,51 @@ console.log(loop(4));
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
-
-
-
 
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
 
+const tanteStringhe = [
+  "carlo",
+  "luca",
+  "criminale",
+  "michele",
+  "coglionazzo",
+  "michelangelo",
+];
+
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const longest = function (array) {
+  let longest = "";
+  for (let i = 0; i < array.length; i++) {
+    if (longest.length < array[i].length) {
+      longest = array[i];
+    }
+  }
+
+  return longest;
+};
+console.log(longest(tanteStringhe));
 
 /* EXTRA 9
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
  La funzione deve ritornare true se "emailContent" non contiene le parole "SPAM" o "SCAM".
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const noSpam = function (emailCont) {
+  let lowerEmail = emailCont.toLowerCase();
+  if (!lowerEmail.includes("spam") && !lowerEmail.includes("scam")) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(noSpam("Sciame Scaem s cam camera scamea "));
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
