@@ -151,6 +151,24 @@ Crea una funzione chiamata "average" che riceve un array come parametro e ne rit
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const avarage = function (arr) {
+  let moAv = 0;
+  let division = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      moAv += arr[i];
+      division++;
+    }
+  }
+  if (division === 0) {
+    return 0;
+  }
+
+  return moAv / division;
+};
+
+console.log(avarage([0, 3, 5, 203]));
+
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
@@ -160,13 +178,13 @@ const tanteStringhe = [
   "luca",
   "criminale",
   "michele",
-  "coglionazzo",
-  "michelangelo",
+  "conigliettino",
+  "michelangelino",
 ];
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const longest = function (array) {
+const longestStr = function (array) {
   let longest = "";
   for (let i = 0; i < array.length; i++) {
     if (longest.length < array[i].length) {
@@ -176,7 +194,7 @@ const longest = function (array) {
 
   return longest;
 };
-console.log(longest(tanteStringhe));
+console.log(longestStr(tanteStringhe));
 
 /* EXTRA 9
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
@@ -194,7 +212,7 @@ const noSpam = function (emailCont) {
   }
 };
 
-console.log(noSpam("ciaom aestro s c sc sc sc"));
+console.log(noSpam("scammmmmmmm"));
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
